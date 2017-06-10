@@ -2,7 +2,7 @@
 //  SearchResultTableViewCell.swift
 //  easy-cooking
 //
-//  Created by kanayachi on 2017/04/02.
+//  Created by Kota Watanabe on 2017/04/02.
 //  Copyright © 2017年 Kota Watanabe. All rights reserved.
 //
 

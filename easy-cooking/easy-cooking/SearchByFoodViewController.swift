@@ -2,7 +2,7 @@
 //  SearchByFoodViewController.swift
 //  easy-cooking
 //
-//  Created by kanayachi on 2017/03/08.
+//  Created by Kota Watanabe on 2017/03/08.
 //  Copyright © 2017年 Kota Watanabe. All rights reserved.
 //
 

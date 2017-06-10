@@ -2,7 +2,7 @@
 //  BookmarkSelectTableViewCell.swift
 //  easy-cooking
 //
-//  Created by kanayachi on 2017/06/04.
+//  Created by Kota Watanabe on 2017/06/04.
 //  Copyright © 2017年 Kota Watanabe. All rights reserved.
 //
 

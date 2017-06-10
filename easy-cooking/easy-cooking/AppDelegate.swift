@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  easy-cooking
 //
-//  Created by kanayachi on 2017/03/05.
+//  Created by Kota Watanabe on 2017/03/05.
 //  Copyright © 2017年 Kota Watanabe. All rights reserved.
 //
 

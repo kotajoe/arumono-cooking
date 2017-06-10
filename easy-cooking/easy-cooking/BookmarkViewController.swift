@@ -2,7 +2,7 @@
 //  BookmarkViewController.swift
 //  easy-cooking
 //
-//  Created by kanayachi on 2017/05/21.
+//  Created by Kota Watanabe on 2017/05/21.
 //  Copyright © 2017年 Kota Watanabe. All rights reserved.
 //
 
