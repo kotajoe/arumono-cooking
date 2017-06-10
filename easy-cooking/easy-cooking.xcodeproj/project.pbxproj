@@ -30,6 +30,7 @@
 		0FA03D541EA36D0B002E8C0A /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA03D531EA36D0B002E8C0A /* RankingTableViewCell.swift */; };
 		0FA03D561EA37652002E8C0A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FA03D551EA37652002E8C0A /* Images.xcassets */; };
 		0FA03D581EA377B9002E8C0A /* SampleRanking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA03D571EA377B9002E8C0A /* SampleRanking.swift */; };
+		0FE173401EE83040008680B3 /* BookmarksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE1733F1EE83040008680B3 /* BookmarksManager.swift */; };
 		0FF101FA1E6B35A00042C465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF101F91E6B35A00042C465 /* AppDelegate.swift */; };
 		0FF101FC1E6B35A00042C465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF101FB1E6B35A00042C465 /* ViewController.swift */; };
 		0FF101FF1E6B35A00042C465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF101FD1E6B35A00042C465 /* Main.storyboard */; };
@@ -71,6 +72,7 @@
 		0FA03D531EA36D0B002E8C0A /* RankingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RankingTableViewCell.swift; path = ../RankingTableViewCell.swift; sourceTree = "<group>"; };
 		0FA03D551EA37652002E8C0A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0FA03D571EA377B9002E8C0A /* SampleRanking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleRanking.swift; sourceTree = "<group>"; };
+		0FE1733F1EE83040008680B3 /* BookmarksManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksManager.swift; sourceTree = "<group>"; };
 		0FF101F61E6B35A00042C465 /* easy-cooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "easy-cooking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF101F91E6B35A00042C465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FF101FB1E6B35A00042C465 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				0FA03D4F1EA34495002E8C0A /* AlertPickerView.swift */,
+				0FE1733F1EE83040008680B3 /* BookmarksManager.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FF101FC1E6B35A00042C465 /* ViewController.swift in Sources */,
+				0FE173401EE83040008680B3 /* BookmarksManager.swift in Sources */,
 				0FA03D501EA34495002E8C0A /* AlertPickerView.swift in Sources */,
 				0F2AB10E1EE3AFB400A3C18E /* BookmarkSelectTableViewController.swift in Sources */,
 				0FA03D541EA36D0B002E8C0A /* RankingTableViewCell.swift in Sources */,

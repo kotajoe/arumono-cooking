@@ -11,7 +11,6 @@ import UIKit
 class SearchResultTableViewCell: UITableViewCell {
 
     @IBOutlet weak var recipeTitle: UILabel!
-    @IBOutlet weak var amount: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -42,8 +42,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         //var bookmarks = [RecipeidWithTitle]()
         //let bookmarkRecipe:RecipeidWithTitle = RecipeidWithTitle(redipeId: "RC0110_002",title: "牛肉とキャベツのオイスターソース炒め")
+
         //bookmarks = userDefault.object(forKey: "bookmark_" + "お気に入り") as! [RecipeidWithTitle]
         //bookmarks.append(bookmarkRecipe)
+        //アーカイブしNSDataに変換
         //userDefault.set(bookmarks, forKey: "bookmark_" + "お気に入り")
         
     }

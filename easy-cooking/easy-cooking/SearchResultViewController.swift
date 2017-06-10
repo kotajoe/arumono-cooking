@@ -56,7 +56,6 @@ class SearchResultViewController: UIViewController, UITableViewDataSource, UITab
         }
         
         cell.recipeTitle.text = sampleSearchResults[indexPath.row].resultTitle
-        cell.amount.text = sampleSearchResults[indexPath.row].resultAmout
         return cell
     }
     

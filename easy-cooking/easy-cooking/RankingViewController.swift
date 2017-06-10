@@ -60,6 +60,14 @@ class RankingViewController: UIViewController, UITableViewDataSource, UITableVie
         }
         return cell
     }
+    
+    // viewを表示する際
+    override func viewWillAppear(_ animated: Bool) {
+        // 選択状態を削除
+        if rankingTableView.indexPathForSelectedRow != nil{
+            self.rankingTableView.deselectRow(at: rankingTableView.indexPathForSelectedRow!, animated: true)
+        }
+    }
 
     // セルがタップされた時
     func tableView(_ table: UITableView, didSelectRowAt indexPath:IndexPath) {

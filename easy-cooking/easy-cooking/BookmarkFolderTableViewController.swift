@@ -61,6 +61,16 @@ class BookmarkFolderTableViewController: UITableViewController {
         return cell
     }
     
+    // viewを表示する際
+    override func viewWillAppear(_ animated: Bool) {
+        // 選択状態を削除
+        if bookmarkView.indexPathForSelectedRow != nil{
+            self.bookmarkView.deselectRow(at: bookmarkView.indexPathForSelectedRow!, animated: true)
+        }
+    }
+
+    
+    
     // セルがタップされた時
     override func tableView(_ table: UITableView, didSelectRowAt indexPath:IndexPath) {
         print(bookmarkFolders[indexPath.row])
@@ -83,7 +93,11 @@ class BookmarkFolderTableViewController: UITableViewController {
             let selectedFolder = bookmarkFolders[indexPath.row]
             bookmarkSelectTableViewController.selectedFolder = selectedFolder
             
-            bookmarkSelectTableViewController.bookmarks = userDefault.object(forKey: "bookmark_" + selectedFolder) as? [RecipeidWithTitle]
+            let bookmarksArray:[String]? = userDefault.stringArray(forKey: "bookmark_" + selectedFolder)
+            if bookmarksArray != nil{
+            let bookmarkManager = BookmarksManager()
+            bookmarkSelectTableViewController.bookmarks = bookmarkManager.getBookmarks(bookmarksArray: bookmarksArray!)
+            }
         }
     }
     

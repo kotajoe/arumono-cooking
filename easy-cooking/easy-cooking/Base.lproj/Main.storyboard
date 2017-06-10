@@ -82,7 +82,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6af-jN-h0g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.97548729680000001" blue="0.92981450509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookmarkFolderTableViewCell" id="aoG-69-J3V" customClass="BookmarkFolderTableViewCell" customModule="easy_cooking" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -105,6 +105,7 @@
                                     </subviews>
                                     <color key="backgroundColor" red="1" green="0.97548729680000001" blue="0.92981450509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="0.97548729680000001" blue="0.92981450509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="folderNameLabel" destination="qR3-ok-Jbt" id="exO-AN-O1S"/>
                                     <segue destination="me9-zG-wmw" kind="show" identifier="ToBookmarks" id="Cmf-hb-rW2"/>
@@ -132,7 +133,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dHp-km-0gM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.97548729680000001" blue="0.92981450509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookmarkSelectTableViewCell" id="b7X-eP-4bN" customClass="BookmarkSelectTableViewCell" customModule="easy_cooking" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -157,6 +158,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="bookmarkTitleLabel" destination="VAy-OW-Eti" id="C6C-gz-aPc"/>
+                                    <segue destination="NcU-Ah-3tR" kind="show" identifier="RecipeFromBookmark" id="bJK-qg-Xkd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -165,6 +167,9 @@
                             <outlet property="delegate" destination="me9-zG-wmw" id="rAm-Q4-UhS"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="bookmarkTableView" destination="dHp-km-0gM" id="cd3-7R-aue"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3c-OG-qa2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -424,13 +429,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="一人前あたり" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2W-oh-srt">
-                                        <rect key="frame" x="285" y="32" width="82" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="12"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.93935044150000002" blue="0.87161027440000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -446,15 +444,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="382" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="食材名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cts-Td-7QD">
-                                                    <rect key="frame" x="8" y="8" width="265" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="値段" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSg-GZ-M94">
-                                                    <rect key="frame" x="295" y="11" width="60" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="レシピ名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cts-Td-7QD">
+                                                    <rect key="frame" x="8" y="8" width="366" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -464,7 +455,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.97548729680000001" blue="0.92981450509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="amount" destination="TSg-GZ-M94" id="cGA-M8-PON"/>
                                             <outlet property="recipeTitle" destination="Cts-Td-7QD" id="xoK-fH-ekc"/>
                                             <segue destination="NcU-Ah-3tR" kind="show" identifier="showRecipeFromFoods" id="Y3A-WI-Mb4"/>
                                         </connections>
@@ -723,6 +713,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wPp-Wl-A4q"/>
-        <segue reference="Y3A-WI-Mb4"/>
+        <segue reference="bJK-qg-Xkd"/>
     </inferredMetricsTieBreakers>
 </document>

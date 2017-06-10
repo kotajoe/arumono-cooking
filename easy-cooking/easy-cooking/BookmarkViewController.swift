@@ -14,7 +14,7 @@ class BookmarkViewController: UIViewController, FolderSelectViewControllerDelega
     var currentRecipe: Recipe!
     var selectedFolder:String = "お気に入り"
     var userDefault:UserDefaults = UserDefaults()
-    var bookmarks:[RecipeidWithTitle]?
+    var bookmarks:[String] = []
 
 
     override func viewDidLoad() {
@@ -134,10 +134,11 @@ class BookmarkViewController: UIViewController, FolderSelectViewControllerDelega
      */
     func onClickRegisterButton(sender : UIButton){
         
-        let bookmarkRecipe:RecipeidWithTitle = RecipeidWithTitle(redipeId: currentRecipe.redipeId, title: currentRecipe.title)
-        
-        bookmarks = userDefault.object(forKey: "bookmark_" + selectedFolder) as? [RecipeidWithTitle]
-        bookmarks?.append(bookmarkRecipe)
+        let bookmarkArray:[String]? = userDefault.stringArray(forKey: "bookmark_" + selectedFolder)
+        if bookmarkArray != nil {
+            bookmarks = bookmarkArray!
+        }
+        bookmarks.append(currentRecipe.redipeId + "\t" + currentRecipe.title)
         userDefault.set(bookmarks, forKey: "bookmark_" + selectedFolder)
         
         let myAlert: UIAlertController = UIAlertController(title: "お気に入り追加", message: "お気に入り追加しました。", preferredStyle: .alert)

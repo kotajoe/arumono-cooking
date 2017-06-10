@@ -13,9 +13,10 @@ class RecipeidWithTitle {
     var redipeId:String = ""
     var title:String = ""
     
-    init(redipeId: String, title: String){
-        self.redipeId = redipeId
-        self.title = title
+    init(recipeidWithTitle: String){
+        let split = recipeidWithTitle.components(separatedBy: "\t")
+        self.redipeId = split[0]
+        self.title = split[1]
     }
     
 }
