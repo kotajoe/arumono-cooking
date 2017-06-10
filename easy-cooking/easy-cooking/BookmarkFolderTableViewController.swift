@@ -16,7 +16,11 @@ class BookmarkFolderTableViewController: UITableViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.bookmarkFolders = userDefault.stringArray(forKey: "boolmarkFolders")!
+        let tempBookmarkFolfers:[String]? = userDefault.stringArray(forKey: "boolmarkFolders")
+        if (tempBookmarkFolfers == nil){
+            userDefault.set(["お気に入り"], forKey: "boolmarkFolders")
+            bookmarkFolders = ["お気に入り"]
+        }
     }
 
     
