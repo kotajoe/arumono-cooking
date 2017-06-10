@@ -34,12 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        let userDefault:UserDefaults = UserDefaults()
-        let bookmarkFolfers:[String]? = userDefault.stringArray(forKey: "boolmarkFolders")
-        if (bookmarkFolfers == nil){
-            userDefault.set(["お気に入り"], forKey: "boolmarkFolders")
-        }
+        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.あ
         //var bookmarks = [RecipeidWithTitle]()
         //let bookmarkRecipe:RecipeidWithTitle = RecipeidWithTitle(redipeId: "RC0110_002",title: "牛肉とキャベツのオイスターソース炒め")
 
